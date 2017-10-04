@@ -8,7 +8,7 @@
 #define           VELOCITY_CLAMP_MIN 20
 #define           VELOCITY_CLAMP_MAX 5000
 
-#define QUADRATIC_DISTANCE_TOLERANCE 3.0   // Minimum distance to make a curve
+#define QUADRATIC_DISTANCE_TOLERANCE 2.0   // Minimum distance to make a curve
 
 #define             MAXIMUM_VERTECES 100000
 
@@ -319,7 +319,7 @@ static PPSSignaturePoint ViewPointToGL(CGPoint viewPoint, CGRect bounds, GLKVect
             // Plot quadratic bezier instead of line
             unsigned int i;
             
-            int segments = (int) distance / 1.5;
+            int segments = (int) distance / 0.1;
             
             float startPenThickness = previousThickness;
             float endPenThickness = penThickness;
